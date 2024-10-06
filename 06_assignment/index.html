@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Square Layout</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 200px; /* Set a fixed width for the square shape */
+            height: 200px; /* Set a fixed height for the square shape */
+            border: 2px solid #333;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: auto;
+            margin: 5px;
+            color: white;
+            font-size: 20px;
+        }
+
+        .pastel-1{
+            background-color: #ff5733;
+        }
+
+        .pastel-2{
+            background-color: #33ff57;
+        }
+
+        .pastel-3{
+            background-color: #3357ff;
+        }
+
+        .pastel-4{
+            background-color: #ff33a1;
+        }
+
+        .pastel-5{
+            background-color: #ffae33;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>1. Default Flex (row)</h2>
+    <div class="box pastel-1">1</div>
+    <div class="box pastel-2">2</div>
+    <div class="box pastel-3">3</div>
+    <div class="box pastel-4">4</div>
+    <div class="box pastel-5">5</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #111;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Carousel Section */
+        .carousel {
+            position: relative;
+            width: 80%;
+            max-width: 1000px;
+            height: 300px;
+            margin-bottom: 30px;
+            overflow: hidden;
+            border: 2px solid white;
+            border-radius: 10px;
+        }
+
+        .slides {
+            display: flex;
+            width: 300%;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        /* Hide the radio buttons */
+        input[type="radio"] {
+            display: none;
+        }
+
+        /* Carousel slide navigation */
+        #slide1:checked ~ .slides {
+            transform: translateX(0%);
+        }
+
+        #slide2:checked ~ .slides {
+            transform: translateX(-33.333%);
+        }
+
+        #slide3:checked ~ .slides {
+            transform: translateX(-66.666%);
+        }
+
+        /* Left and Right Controls */
+        .controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .controls label {
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        /* Cards Section */
+        .cards-container {
+            display: flex;
+            justify-content: space-around;
+            width: 80%;
+            max-width: 1000px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background-color: #222;
+            width: 30%;
+            padding: 20px;
+            border: 1px solid white;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+        }
+
+        .card iframe {
+            width: 100%;
+            height: 200px;
+            margin-bottom: 10px;
+        }
+
+        .card a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .card a:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: auto;
+            background-color: #222;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            border-top: 1px solid white;
+            color: #bbb;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Carousel Section -->
+    <div class="carousel">
+        <!-- Radio inputs for slides control -->
+        <input type="radio" name="carousel" id="slide1" checked>
+        <input type="radio" name="carousel" id="slide2">
+        <input type="radio" name="carousel" id="slide3">
+
+        <!-- Slides -->
+        <div class="slides">
+            <img src="../images/pexels-magda-ehlers-pexels-1337387.jpg" alt="Slide 1">
+            <img src="../images/pexels-pixabay-159751.jpg" alt="Slide 2">
+            <img src="../images/pexels-pixabay-159866.jpg" alt="Slide 3">
+        </div>
+
+        <!-- Left and Right Controls -->
+        <div class="controls">
+            <label for="slide1">&#10094;</label>
+            <label for="slide2">&#10095;</label>
+        </div>
+    </div>
+
+    <!-- Cards Section -->
+    <div class="cards-container">
+        <div class="card">
+            <h3>YouTube Video 1</h3>
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <a href="video1.html">Watch Now</a>
+        </div>
+        <div class="card">
+            <h3>YouTube Video 2</h3>
+            <iframe src="https://www.youtube.com/embed/3JZ_D3ELwOQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <a href="video2.html">Watch Now</a>
+        </div>
+        <div class="card">
+            <h3>YouTube Video 3</h3>
+            <iframe src="https://www.youtube.com/embed/9bZkp7q19f0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <a href="video3.html">Watch Now</a>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        &copy; 2024 Yourname
+    </footer>
+
+</body>
+</html>
